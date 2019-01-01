@@ -1,0 +1,16 @@
+Locales['fr'] = {
+  ['shop_robbery'] = 'piratage',
+  ['press_to_rob'] = 'appuyez sur ~INPUT_CONTEXT~ ~o~pour pirater~s~ ~b~%s~s~',
+  ['robbery_timer'] = 'piratage atm: il reste ~r~%s~s~ secondes',
+  ['recently_robbed'] = 'cet atm a déjà été piraté. Attendez ~r~%s~b~ secondes.',
+  ['rob_in_prog'] = '~r~piratage en cours à: ~b~%s~s~',
+  ['started_to_rob'] = 'vous avez commencé à pirater ~b~%s~s~',
+  ['alarm_triggered'] = 'l\'alarme a été déclenchée',
+  ['robbery_complete'] = '~r~piratage terminé~s~. Vous avez ~o~volé~s~ ~g~$%s~s~',
+  ['robbery_complete_at'] = '~r~piratage terminé à: ~b~%s~s~',
+  ['robbery_cancelled'] = 'le piratage va être annulé, vous ne gagnerez rien!',
+  ['robbery_cancelled_at'] = '~r~piratage annulé à: ~b~%s~s~',
+  ['min_police'] = 'il faut minimum ~b~%s policiers~s~ en ville pour pirater.',
+  ['robbery_already'] = '~r~Un piratage est déjà en cours.',
+  ['no_threat'] = 'you do not pose a threat to the store keeper',
+}
