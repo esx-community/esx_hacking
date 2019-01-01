@@ -10,5 +10,4 @@ Of course, you are free to modify this script.
 
 -------- Installation --------
 
-- Import "sql.sql" in your database
 - Add this in your "server.cfg" : start esx_hacking
