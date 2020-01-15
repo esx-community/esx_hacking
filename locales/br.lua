@@ -14,3 +14,4 @@ Locales['br'] = {
   ['robbery_already'] = '~r~Um assalto já está em andamento.',
   ['no_threat'] = 'você não representa uma ameaça para o lojista',
 }
+
