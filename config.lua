@@ -37,5 +37,13 @@ Stores = {
 		nameOfStore = "Data base du FBI. (Pillbox Hill)",
 		secondsRemaining = 180, -- seconds
 		lastRobbed = 0
+	},
+	-- hospital
+	["hospital_twentyfourseven"] = {
+		position = { x = 231.001, y = -1369.001, z = 39.5 },
+		reward = math.random(200000, 275000),
+		nameOfStore = "Data base d\'Hôpital.",
+		secondsRemaining = 180, -- seconds
+		lastRobbed = 0
 	}
 }

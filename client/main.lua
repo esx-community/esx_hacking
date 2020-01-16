@@ -37,18 +37,18 @@ function drawTxt(x,y, width, height, scale, text, r,g,b,a, outline)
 	EndTextCommandDisplayText(x - width/2, y - height/2 + 0.005)
 end
 
-RegisterNetEvent('esx_holdup:currentlyRobbing')
-AddEventHandler('esx_holdup:currentlyRobbing', function(currentStore)
+RegisterNetEvent('esx_hacking:currentlyRobbing')
+AddEventHandler('esx_hacking:currentlyRobbing', function(currentStore)
 	holdingUp, store = true, currentStore
 end)
 
-RegisterNetEvent('esx_holdup:killBlip')
-AddEventHandler('esx_holdup:killBlip', function()
+RegisterNetEvent('esx_hacking:killBlip')
+AddEventHandler('esx_hacking:killBlip', function()
 	RemoveBlip(blipRobbery)
 end)
 
-RegisterNetEvent('esx_holdup:setBlip')
-AddEventHandler('esx_holdup:setBlip', function(position)
+RegisterNetEvent('esx_hacking:setBlip')
+AddEventHandler('esx_hacking:setBlip', function(position)
 	blipRobbery = AddBlipForCoord(position.x, position.y, position.z)
 
 	SetBlipSprite(blipRobbery, 161)
@@ -58,20 +58,20 @@ AddEventHandler('esx_holdup:setBlip', function(position)
 	PulseBlip(blipRobbery)
 end)
 
-RegisterNetEvent('esx_holdup:tooFar')
-AddEventHandler('esx_holdup:tooFar', function()
+RegisterNetEvent('esx_hacking:tooFar')
+AddEventHandler('esx_hacking:tooFar', function()
 	holdingUp, store = false, ''
 	ESX.ShowNotification(_U('robbery_cancelled'))
 end)
 
-RegisterNetEvent('esx_holdup:robberyComplete')
-AddEventHandler('esx_holdup:robberyComplete', function(award)
+RegisterNetEvent('esx_hacking:robberyComplete')
+AddEventHandler('esx_hacking:robberyComplete', function(award)
 	holdingUp, store = false, ''
 	ESX.ShowNotification(_U('robbery_complete', award))
 end)
 
-RegisterNetEvent('esx_holdup:startTimer')
-AddEventHandler('esx_holdup:startTimer', function()
+RegisterNetEvent('esx_hacking:startTimer')
+AddEventHandler('esx_hacking:startTimer', function()
 	local timer = Stores[store].secondsRemaining
 
 	Citizen.CreateThread(function()
@@ -122,7 +122,7 @@ Citizen.CreateThread(function()
 						ESX.ShowHelpNotification(_U('press_to_rob', v.nameOfStore))
 
 						if IsControlJustReleased(0, Keys['E']) then
-								TriggerServerEvent('esx_holdup:robberyStarted', k)
+								TriggerServerEvent('esx_hacking:robberyStarted', k)
 						end
 					end
 				end
@@ -132,7 +132,7 @@ Citizen.CreateThread(function()
 		if holdingUp then
 			local storePos = Stores[store].position
 			if Vdist(playerPos.x, playerPos.y, playerPos.z, storePos.x, storePos.y, storePos.z) > Config.MaxDistance then
-				TriggerServerEvent('esx_holdup:tooFar', store)
+				TriggerServerEvent('esx_hacking:tooFar', store)
 			end
 		end
 	end
